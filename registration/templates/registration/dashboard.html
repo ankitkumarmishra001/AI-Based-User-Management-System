@@ -1,0 +1,35 @@
+<h1>Hello {{ user.full_name }} 👋</h1>
+
+<h2>How can I help you today?</h2>
+
+<ul>
+    <li>
+        <a href="{% url 'view_profile' %}">
+            View Profile
+        </a>
+    </li>
+
+    <li>
+        <a href="{% url 'update_profile' %}">
+            Update Profile
+        </a>
+    </li>
+
+    <li>
+        <a href="/raise-query/">
+            Raise Query
+        </a>
+    </li>
+
+    <li>
+        <a href="/feedback/">
+            Submit Feedback
+        </a>
+    </li>
+
+    <li>
+        <a href="{% url 'track_query' %}">
+        Track Query Status
+        </a>
+    </li>
+</ul>

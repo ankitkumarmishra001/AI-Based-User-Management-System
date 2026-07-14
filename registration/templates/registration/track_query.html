@@ -1,0 +1,43 @@
+<h1>Track Query Status</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">
+        Track Query
+    </button>
+</form>
+
+{% if query %}
+
+<hr>
+
+<h2>Query Details</h2>
+
+<p>
+    <strong>Ticket Number:</strong>
+    {{ query.ticket_id }}
+</p>
+
+<p>
+    <strong>Status:</strong>
+    {{ query.status }}
+</p>
+
+<p>
+    <strong>Admin Response:</strong>
+    {{ query.admin_response }}
+</p>
+
+<p>
+    <strong>Query:</strong>
+    {{ query.query_text }}
+</p>
+
+<p>
+    <strong>Created:</strong>
+    {{ query.created_at }}
+</p>
+
+{% endif %}
